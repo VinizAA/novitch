@@ -1,0 +1,130 @@
+/* Estilos personalizados além do Tailwind */
+        :root {
+            --neon-blue: #00f2ff;
+            --neon-purple: #b400ff;
+            --neon-green: #00ff9d;
+            --dark-bg: #0f0f1a;
+            --darker-bg: #080811;
+            --card-bg: #1a1a2e;
+        }
+        
+        body {
+            background-color: var(--dark-bg);
+            color: white;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            overflow-x: hidden;
+        }
+        
+        /* Efeitos neon */
+        .neon-blue {
+            box-shadow: 0 0 5px var(--neon-blue), 0 0 10px var(--neon-blue);
+        }
+        
+        .neon-purple {
+            box-shadow: 0 0 5px var(--neon-purple), 0 0 10px var(--neon-purple);
+        }
+        
+        .neon-green {
+            box-shadow: 0 0 5px var(--neon-green), 0 0 10px var(--neon-green);
+        }
+        
+        .neon-text-blue {
+            text-shadow: 0 0 5px var(--neon-blue);
+        }
+        
+        .neon-text-purple {
+            text-shadow: 0 0 5px var(--neon-purple);
+        }
+        
+        .neon-text-green {
+            text-shadow: 0 0 5px var(--neon-green);
+        }
+        
+        /* Animação de borda para stories */
+        @keyframes border-pulse {
+            0% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0.7); }
+            70% { box-shadow: 0 0 0 10px rgba(0, 242, 255, 0); }
+            100% { box-shadow: 0 0 0 0 rgba(0, 242, 255, 0); }
+        }
+        
+        .story-border {
+            animation: border-pulse 2s infinite;
+            border-radius: 50%;
+        }
+        
+        /* Transições suaves */
+        .transition-smooth {
+            transition: all 0.3s ease;
+        }
+        
+        /* Efeito de hover nos cards */
+        .post-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+        }
+        
+        /* Scroll personalizado */
+        ::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        ::-webkit-scrollbar-track {
+            background: var(--darker-bg);
+        }
+        
+        ::-webkit-scrollbar-thumb {
+            background: var(--neon-blue);
+            border-radius: 4px;
+        }
+        
+        /* Animação de entrada para posts */
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        
+        .fade-in-up {
+            animation: fadeInUp 0.5s ease forwards;
+        }
+        
+        /* Modal de story */
+        .story-modal {
+            background: rgba(15, 15, 26, 0.9);
+            backdrop-filter: blur(10px);
+        }
+
+        .category-button:hover {
+            background-color: #a5b1c2;
+        }
+
+        .logo-img {
+            height: 60px;
+            width: auto;
+            display: block;
+            margin: 0 auto;
+            object-fit: contain;
+        }
+
+        .logo-header {
+            height: 70px;
+            width: auto;
+            object-fit: contain;
+            display: block;
+            margin: 0;
+        }
+        
+        .story-border {
+            transition: transform 0.3s ease;
+            cursor: pointer;
+        }
+          
+        .story-border:hover {
+            transform: scale(1.1);
+            box-shadow: 0 0 15px rgba(100, 100, 255, 0.5);
+        }
